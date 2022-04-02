@@ -1,0 +1,1 @@
+{"version":1,"defects":{"app\\tests\\BasketTest::testBasketConstructor":4,"app\\tests\\BasketTest::testBasketProps":3},"times":{"app\\tests\\BasketTest::testBasketConstructor":0.006,"app\\tests\\BasketTest::testBasketProps":0,"app\\tests\\GoodsTest::testGoodsConstructor":0,"app\\tests\\GoodsTest::testGoodsProps":0}}

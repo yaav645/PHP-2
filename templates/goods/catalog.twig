@@ -1,0 +1,24 @@
+<h1> Каталог товаров </h1>
+{% for properties in catalog %}
+    <div>
+        <div>
+            <h2>{{ properties.name }}</h2>
+            <!--    <img src="<?=$img?>" width="150"><br> -->
+            Описание: {{ properties.description }}<br>
+            Цена: {{ properties.price }}<br>
+            Likes: {{ properties.likes }}<br><br>
+
+            <form method="post" action="?c=goods&a=show&id={{ properties.id }} ">
+
+                <button>ПОДРОБНЕЙ</button>
+            </form><br>
+            <form method="post" action="/catalog/buy">
+
+                <button>КУПИТЬ</button>
+            </form>
+            <hr>
+        </div>
+    </div>
+{% endfor %}
+
+<a href="?c=goods&a=catalog&page={{ page }}">Дальше</a>

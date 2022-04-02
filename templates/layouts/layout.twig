@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title | raw }}</title>
+</head>
+<body>
+Добро пожаловать {{ session | raw }}! <a href="/?logout">Выход</a><br>
+<br>
+{{ menu | raw }}
+{{ content | raw }}
+<br>
+<?=$content?>
+</body>
+</html>

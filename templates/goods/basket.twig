@@ -1,0 +1,21 @@
+<h1> Корзина </h1>
+{%  for properties in basket %}
+    <div>
+        <div>
+            <h2>{{ properties.goods_id }} - {{ properties.name }}</h2>
+            <!--    <img src="<?=$img?>" width="150"><br> -->
+            Описание: {{ properties.description }}<br>
+            Цена: {{ properties.price }}<br>
+
+
+            <form method="post" action="/basket/buy">
+                <input type="text" name="id" value="{{ goods_id }}" hidden><br>
+                <button formaction="/basket/buy">ДОБАВИТЬ</button>
+                <button formaction="/basket/delete">УДАЛИТЬ</button>
+            </form>
+            <hr>
+        </div>
+    </div>
+{% endfor %}
+
+

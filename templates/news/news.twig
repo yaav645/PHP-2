@@ -1,0 +1,16 @@
+<h1> Новости </h1>
+{% for properties in news %}
+    <div>
+        <div>
+            <h2> {{ properties.title }} </h2>
+            Описание: {{ properties.text }} <br><br>
+
+            <form method="post" action="?c=news&a=show&id={{ properties.id }}">
+                <button>ПОДРОБНЕЙ</button>
+            </form><br>
+            <hr>
+        </div>
+    </div>
+{% endfor %}
+
+<a href="?c=news&a=news&page={{ page }} ">Дальше</a>
